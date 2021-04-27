@@ -2,8 +2,8 @@ package homeWork;
 
 public class CourseManager {
 
-	public void purchase(Courses course) {
-		String txt="Ucretsiz Kayit Ol "+course.name;
+	public void purchase(Courses courses) {
+		String txt="Ucretsiz Kayit Ol "+courses.name;
 	for(int i=0 ; i<=txt.length();i++) {
 		System.out.print("-");
 }
@@ -20,8 +20,8 @@ public class CourseManager {
 		
 	}
 
-	public void write(Courses course) {
-	 System.out.println("\n"+"Sepete eklendi: "+course.name);
+	public void write(Courses courses) {
+	 System.out.println("\n"+"Sepete eklendi: "+courses.name);
 	}
 	
 	public void loop() {

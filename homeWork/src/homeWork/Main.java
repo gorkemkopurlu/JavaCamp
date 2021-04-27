@@ -12,27 +12,20 @@ public class Main {
 			category1.id=1;
 			category1.name="All";
 		
-	
-		//1.kurs icin
-		System.out.println("Kursun Ismi: "+course1.name + "\nIlerleme: "+ course1.progress+ "\nEgitmenin ismi: "+ course1.instructorName+"\n"+course1.progressBar);
-		courseManager.purchase(course1);
-		courseManager.write(course1);
-		System.out.print("\n");
-		courseManager.loop();
-		System.out.println("\n");
-		
-		//2.kurs icin
-		System.out.println("Kursun Ismi: "+course2.name + "\nIlerleme: "+ course2.progress+ "\nEgitmenin ismi: "+ course2.instructorName+"\n"+course2.progressBar);
-		courseManager.purchase(course2);
-		courseManager.write(course2);
-		System.out.print("\n");
-		courseManager.loop();
-		System.out.println("\n");
-		
-	//3.kurs icin
-		System.out.println("Kursun Ismi: "+course3.name + "\nIlerleme: "+ course3.progress+ "\nEgitmenin ismi: "+ course3.instructorName+"\n"+course3.progressBar);
-		courseManager.purchase(course3);
-		courseManager.write(course3);
+	Courses[] courses= {course1,course2,course3};
+			for(Courses course:courses) {
+				System.out.println("Kursun Ismi: "+course.name + "\nIlerleme: "+ course.progress+ "\nEgitmenin ismi: "+ course.instructorName+"\n"+course.progressBar);
+				courseManager.purchase(course1);
+				courseManager.write(course1);
+				System.out.print("\n");
+				if(course==course3) {
+					break;
+				}
+				courseManager.loop();
+				System.out.println("\n");
+				
+			};	
+			
 	}
 
 }
